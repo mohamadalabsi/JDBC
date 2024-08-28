@@ -18,6 +18,8 @@ public class Main {
             int emp_id = rs.getInt("emp_id");
             System.out.println(emp_id);
         }
+        rs.close();
+
 
     }
 }

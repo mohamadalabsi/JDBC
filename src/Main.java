@@ -4,8 +4,9 @@ import java.sql.*;
 public class Main {
     public static void main(String[] args) throws SQLException {
 
-        String sql = "select emp_id from employee";
-        String url = "jdbc:postgresql://localhost:5432/test";
+//        String sql = "select first_name from employee";
+        String sql = "select price from car";
+        String url = "jdbc:postgresql://localhost:5432/people";
         Demo demo = new Demo();
 
 
@@ -15,10 +16,14 @@ public class Main {
         ResultSet rs =  stmt.executeQuery(sql);
 
         while(rs.next()){
-            int emp_id = rs.getInt("emp_id");
-            System.out.println(emp_id);
+            String price = rs.getString("price");
+            System.out.println(price);
         }
         rs.close();
+
+
+
+
 
 
     }
